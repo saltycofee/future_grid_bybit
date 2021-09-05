@@ -538,7 +538,6 @@ class Trading_srv():
     # 接私有的推送
     def on_open_private(self):
         params = self.BuildMysign()
-        # auth_str ='{"op":"auth","args":["cckaJkBPNVLdx6Qxtj","1644531840000","'+sigture+'"]}'
         # print(auth_str)
         # ws.send(json.dumps(auth_str))
         self.ws.send(json.dumps({
@@ -707,7 +706,7 @@ class Application(tk.Tk):
         self.grid_profit_Combobox.grid(row=3,column=6,columnspan=2,sticky='w', padx=1,pady=1)
         self.button1.grid(row=3, column=8, columnspan=2, sticky='w', padx=1, pady=1)
         self.stop_btn.grid(row=4, column=8, columnspan=2, sticky='w', padx=1, pady=1)
-        self.result_data_text.grid(row=1, column=10, rowspan=12, columnspan=12, sticky='e', padx=1, pady=1)
+        self.result_data_text.grid(row=1, column=10, rowspan=4, columnspan=12, sticky='e', padx=1, pady=1)
 
         #在showerorders 上展示表格
         self.sheet = Sheet(self.showorders,
